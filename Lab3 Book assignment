@@ -1,0 +1,92 @@
+import java.util.Scanner;
+class Book{
+private String name;
+private String author;
+private double price;
+private int num_pages;
+
+Book(String s,String a,double p,int n)
+{
+name=s;
+author=a;
+price=p;
+num_pages=n;
+}
+Book()
+{
+name="";
+author="";
+price=0;
+num_pages=0;
+}
+void setdata()
+{
+Scanner in=new Scanner(System.in);
+System.out.println("Enter the name of the book : ");
+name=in.next();
+in.nextLine();
+System.out.println("Enter the author of the book : ");
+author=in.next();
+in.nextLine();
+System.out.println("Enter the price of the book : ");
+price=in.nextDouble();
+System.out.println("Enter the number of pages in the book : ");
+num_pages=in.nextInt();
+}
+void getdata()
+{
+System.out.println("The name of the book is : "+name);
+System.out.println("The author of the book is : "+author);
+System.out.println("The price of the book is : "+price);
+System.out.println("Number of pages in the book are : "+num_pages);
+}
+
+public String toString()
+{
+return("Name of the book : "+name+"\nAuthor of the book : "+author+"\nPrice of the book : "+price+"\nNumber of pages in the book : "+num_pages);
+}
+}
+public class booklab3
+{
+public static void main(String args[]){
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter the number of books : ");
+int n=sc.nextInt();
+Book b[]=new Book[n];
+int i;
+System.out.println("Enter the details of the book : ");
+for(i=0;i<n;i++)
+{
+System.out.println("Enter the details of the "+(i+1)+" book");
+b[i]=new Book();
+b[i].setdata();
+}
+System.out.println("The details of the books are : ");
+for(i=0;i<n;i++)
+{
+System.out.println("The details of the "+(i+1)+" book is : ");
+System.out.println(b[i]);
+}
+}
+}
+_____________________________________________________________
+Output:-
+D:\Java\jdk-14.0.2\bin>java booklab3
+Enter the number of books :
+1
+Enter the details of the book :
+Enter the details of the 1 book
+Enter the name of the book :
+sky
+Enter the author of the book :
+sidney
+Enter the price of the book :
+399
+Enter the number of pages in the book :
+450
+The details of the books are :
+The details of the 1 book is :
+Name of the book : sky
+Author of the book : sidney
+Price of the book : 399.0
+Number of pages in the book : 450
