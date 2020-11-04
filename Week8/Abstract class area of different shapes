@@ -1,0 +1,43 @@
+abstract class shape
+{
+int a=4,b=7;
+abstract public void print_area();
+}
+class rectangle extends shape
+{
+public int area_rect;
+public void print_area()
+{
+area_rect=a*b;
+System.out.println("Area of rectangle is:"+area_rect);
+}
+}
+class triangle extends shape
+{
+double area_tri;
+public void print_area()
+{
+area_tri=(a*b)/2;
+System.out.println("The area of triangle is:"+area_tri);
+}
+}
+class circle extends shape
+{
+double area_circle;
+public void print_area()
+{
+area_circle=((3.14)*b*b);
+System.out.println("Area of circle is:"+area_circle);
+}
+}
+public class abshape
+{
+public static void main(String[]args){
+rectangle r= new rectangle();
+r.print_area();
+triangle t= new triangle();
+t.print_area();
+circle r= new circle();
+r.print_area();
+}
+}
