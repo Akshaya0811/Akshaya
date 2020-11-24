@@ -1,0 +1,18 @@
+package cie;
+import java.util.*;
+public class Internals
+{
+	public int i;
+	public int marksCIE[];
+	public void internals()
+	{
+		Scanner in = new Scanner(System.in);
+		marksCIE=new int[5];
+		System.out.println("Enter the marks in 5 subjects of student\n");
+		for(i=0;i<5;i++)
+		{
+			
+			marksCIE[i]=in.nextInt();
+		}
+	}
+}
