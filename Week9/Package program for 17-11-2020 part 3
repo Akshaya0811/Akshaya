@@ -1,0 +1,16 @@
+package see;
+import cie.*;
+import java.util.*;
+public class Externals extends cie.student
+{
+	public int i;
+	public int marksSEE[];
+	public void externals()
+	{
+		Scanner in = new Scanner(System.in);
+		marksSEE=new int[5];
+		System.out.println("Enter the external marks in 5 subjects of student\n");
+		for(i=0;i<5;i++)
+			marksSEE[i]=in.nextInt();
+	}
+}
