@@ -1,0 +1,36 @@
+import cie.*;
+import see.*;
+import java.util.*;
+class finalmarks
+{
+	public static void main(Stringargs[])
+	{
+		int total[];
+		Scanner in =new Scanner(System.in);
+		System.out.println("Enter the number of students\n");
+		int n=in.nextInt();
+		cie.student s[]=new cie.student[n];
+		cie.Internals c[]=new cie.Internals[n];
+		cie.Externals e[]=new see.Externals[n];
+		System.out.println("Enter the details of student\n");
+		for(i=0;i<n;i++)
+		{
+			s[i]=new cie.student();
+			c[i]=new cie.Internals();
+			e[i]=new see.Externals();
+			s[i].studentDetails();
+			c[i].internals();
+			s[i].externals();
+		}
+		for(int i=0;i<n;i++)
+		{
+			for(int j=0;j<5;j++)
+			{
+			total[j]=c[i].marksCIE[j]+e[i].marksSEE[j]/2;
+			}
+			System.out.println("Total marks for student"+(i+1)+"in each subject are:\n");
+			for(int j=0;j<5;j++)
+				System.out.println("Total marks in subject"+(j+1)+"for student"+(i+1)+"is:\n"+total[j]);
+		}
+	}
+}
